@@ -1,0 +1,41 @@
+
+.specialsHeader {
+    margin: 4rem 0 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+  }
+  
+  h2.title {
+    align-self: center;
+    @media (max-width: 60rem) {
+      font-size: 7rem;
+    }
+    @media (max-width: 45rem) {
+      font-size: 5rem;
+    }
+  
+    @media (max-width: 32rem) {
+      font-size: 4rem;
+    }
+  }
+  
+  .grid3column {
+    //   position: relative;
+    margin: 2rem 0;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    padding-bottom: 4rem;
+  
+    @media (max-width: 80rem) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 4rem;
+    }
+  
+    @media (max-width: 35rem) {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+    }
+  }

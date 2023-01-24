@@ -1,0 +1,21 @@
+@import "../../style/variables.scss";
+
+.btnContainer {
+  margin: 1.5rem 0;
+
+  cursor: pointer;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 1.6rem;
+  background: $colorPrimaryYellow;
+
+  &:hover {
+    background: $colorPrimaryYellowDark;
+  }
+}
+
+.btnTitle {
+  font-family: "Karla", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}

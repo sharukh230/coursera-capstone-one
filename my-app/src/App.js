@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Nav } from "./components/Nav";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+import { BookingPage } from "./pages/BookingPage";
+import { ConfirmedPage } from "./pages/ConfirmedPage";
+// import useExternalScripts from "./hooks/useExternalScripts";
+// import { Helmet } from "react-helmet";
+import Safe from "react-safe";
+import { ErrorPage } from "./pages/ErrorPage";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/booking" element={<BookingPage />} />
+        <Route path="/confirmed-booking" element={<ConfirmedPage />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,103 @@
+@import "../../style/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+
+  @media (max-width: 80rem) {
+    width: 80%;
+  }
+
+  & .inputBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    & i {
+      position: absolute;
+      padding-top: 3.2rem;
+      padding-left: 1.5rem;
+      //   font-size: 1.6rem;
+      color: $colorPrimaryGreen;
+    }
+  }
+
+  & input,
+  select,
+  button {
+    width: 100%;
+    // margin-bottom: 2rem;
+
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 1px 2px 4px 1px rgb(201, 201, 201);
+    padding: 1rem;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    color: $colorPrimaryGreen;
+    background-color: $colorGreyLight;
+    transition: all 0.5s;
+
+    &:hover {
+      box-shadow: 0px 1px 4px 0px rgb(201, 201, 201);
+    }
+  }
+
+  & label {
+    font-size: 1.6rem;
+    color: $colorPrimaryGreen;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.errorBox {
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: red;
+  color: white;
+  padding: 0.25rem 0.75rem;
+}
+
+button.submitBtn {
+  //   margin-top: 1rem;
+  cursor: pointer;
+
+  // padding: 4rem;
+  height: 5rem;
+  border-radius: 1rem;
+
+  box-shadow: 1px 3px 2px 2px rgb(201, 201, 201) !important;
+  color: $colorGreyDark !important;
+  background-color: $colorPrimaryYellow !important;
+  transition: all 0.5s;
+
+  &:hover {
+    box-shadow: 0px 1px 4px 0px rgb(201, 201, 201) !important;
+    // background-color: $colorPrimaryYellowDark !important;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    // color: aliceblue !important;
+    box-shadow: none !important;
+  }
+}
+
+// button:disabled {
+//   background-color: aliceblue !important;
+//   box-shadow: none;
+// }
